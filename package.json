@@ -7,5 +7,9 @@
   "author": {
     "name": "Christopher J. Brody",
     "email": "chris.brody@gmail.com"
+  },
+  "scripts": {
+    "clean-test": "rm -rf test/n* test/package-lock.json test/pl*",
+    "prepare-test": "npm run clean-test && mkdir test/plugin && cp -r package.json plugin.xml src www test/plugin && cd test && cordova plugin add plugin"
   }
 }
