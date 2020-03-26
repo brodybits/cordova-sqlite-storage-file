@@ -10,6 +10,7 @@
     </config-file>
     <source-file src="src/android/SQLiteStorageFilePlugin.java" target-dir="src/io/sqlc"/>
   </platform>
+  <!-- TBD iOS & macOS ("osx") platform build disabled for now:
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
       <feature name="SQLiteStorageFilePlugin">
@@ -26,4 +27,5 @@
     </config-file>
     <source-file src="src/ios/SQLiteStorageFilePlugin.m"/>
   </platform>
+  - -->
 </plugin>
