@@ -1,0 +1,29 @@
+<plugin id="cordova-sqlite-storage-file" version="0.1.0-dev">
+  <js-module src="www/sqliteStorageFile.js" name="sqliteStorageFile">
+    <runs/>
+  </js-module>
+  <platform name="android">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SQLiteStorageFilePlugin">
+        <param name="android-package" value="io.sqlc.SQLiteStorageFilePlugin"/>
+      </feature>
+    </config-file>
+    <source-file src="src/android/SQLiteStorageFilePlugin.java" target-dir="src/io/sqlc"/>
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SQLiteStorageFilePlugin">
+        <param name="ios-package" value="SQLiteStorageFilePlugin"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/SQLiteStorageFilePlugin.m"/>
+  </platform>
+  <platform name="osx">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SQLiteStorageFilePlugin">
+        <param name="osx-package" value="SQLiteStorageFilePlugin"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/SQLiteStorageFilePlugin.m"/>
+  </platform>
+</plugin>

@@ -1,0 +1,11 @@
+{
+  "name": "cordova-sqlite-storage-file",
+  "version": "0.1.0-dev",
+  "// copyright": "Copyright 2020-present Christopher J. Brody <chris.brody@gmail.com>",
+  "description": "cordova-sqlite-storage file helper",
+  "license": "MIT",
+  "author": {
+    "name": "Christopher J. Brody",
+    "email": "chris.brody@gmail.com"
+  }
+}
