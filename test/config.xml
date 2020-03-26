@@ -1,0 +1,4 @@
+<widget id="com.test" version="0.1.0-dev">
+  <name>test</name>
+  <description>cordova-sqlite-storage-file test app</description>
+</widget>
