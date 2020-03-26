@@ -1,14 +1,21 @@
 // Copyright 2020-present Christopher J. Brody <chris.brody@gmail.com>
 
-function resolveAbsolutePath (callback) {
+function resolveAbsolutePath (options, callback, errorcb) {
+  if (!options.name) throw new Error('missing name')
+
+  if (!options.location) throw new Error('missing location')
+
+  if (options.location !== 'default')
+    throw new Error('custom location not supported')
+
   cordova.exec(
-    function () {
-      callback('pong')
+    function (result) {
+      callback(result)
     },
-    null,
+    errorcb,
     'SQLiteStorageFilePlugin',
     'resolveFilePath',
-    null
+    [options.name]
   )
 }
 

@@ -1,14 +1,27 @@
 // Copyright 2020-present Christopher J. Brody <chris.brody@gmail.com>
 
 document.addEventListener('deviceready', function () {
-  document
-    .getElementById('status')
+  var status = document.getElementById('status')
+
+  status
     .appendChild(document.createElement('b'))
     .appendChild(document.createTextNode('ready'))
-  window.sqliteStorageFile.resolveAbsolutePath(function () {
-    document
-      .getElementById('status')
+
+  status
+    .appendChild(document.createElement('br'))
+
+  window.sqliteStorageFile.resolveAbsolutePath({
+    name: 'test.db',
+    location: 'default'
+  }, function (result) {
+    status
       .appendChild(document.createElement('i'))
-      .appendChild(document.createTextNode('pong'))
+      .appendChild(document.createTextNode('received result'))
+
+    status
+      .appendChild(document.createElement('br'))
+
+    status
+      .appendChild(document.createTextNode(result))
   })
 })
