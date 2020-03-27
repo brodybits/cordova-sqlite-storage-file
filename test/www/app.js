@@ -12,7 +12,8 @@ document.addEventListener('deviceready', function () {
 
   window.sqliteStorageFile.resolveAbsolutePath({
     name: 'test.db',
-    location: 'default'
+    // TEMPORARY & DEPRECATED setting for testing on both iOS & Android:
+    location: 2
   }, function (result) {
     status
       .appendChild(document.createElement('i'))

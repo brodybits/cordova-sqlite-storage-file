@@ -5,8 +5,8 @@ function resolveAbsolutePath (options, callback, errorcb) {
 
   if (!options.location) throw new Error('missing location')
 
-  if (options.location !== 'default')
-    throw new Error('custom location not supported')
+  if (options.location !== 'default' && options.location !== 2)
+    throw new Error('location value supported: ' + options.location)
 
   cordova.exec(
     function (result) {
@@ -15,7 +15,7 @@ function resolveAbsolutePath (options, callback, errorcb) {
     errorcb,
     'SQLiteStorageFilePlugin',
     'resolveFilePath',
-    [options.name]
+    [options.name, options.location.toString()]
   )
 }
 
