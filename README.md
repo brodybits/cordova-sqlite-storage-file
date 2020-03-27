@@ -6,6 +6,11 @@ with initial implementation on iOS & macOS ("osx") with a temporary and deprecat
 
 **License:** MIT
 
+### General motivations
+
+- an application could use this plugin to get the absolute path which is needed to form ATTACH and DETACH statements
+- supports file-based db files for new SQLite plugin in progress ([`brodybits/ask-me-anything#3`](https://github.com/brodybits/ask-me-anything/issues/3))
+
 ## Sample code
 
 For Android only:
