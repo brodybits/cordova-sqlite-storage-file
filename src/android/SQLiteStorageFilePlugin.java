@@ -27,6 +27,16 @@ public class SQLiteStorageFilePlugin extends CordovaPlugin {
       File dbFileObject =
         cordova.getActivity().getApplicationContext().getDatabasePath(name);
 
+      // Create the parent directory path if needed,
+      // in case if the file does not yet exist.
+      // This step seems to have been needed in cordova-sqlite-storage
+      // on certain Android OS versions.
+      // (following a contribution to cordova-sqlite-storage back in 2014)
+      if (!dbFileObject.exists()) {
+        File parentDirFileObject = dbFileObject.getParentFile();
+        parentDirFileObject.mkdirs();
+      }
+
       cbc.success(dbFileObject.getAbsolutePath());
     } catch (Exception e) {
       cbc.error(e.getMessage());
