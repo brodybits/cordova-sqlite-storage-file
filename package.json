@@ -1,6 +1,6 @@
 {
   "name": "cordova-sqlite-storage-file",
-  "version": "0.1.0-dev",
+  "version": "0.0.1",
   "// copyright": "Copyright 2020-present Christopher J. Brody <chris.brody@gmail.com>",
   "description": "cordova-sqlite-storage file helper",
   "repository": "github:brodybits/cordova-sqlite-storage-file",
